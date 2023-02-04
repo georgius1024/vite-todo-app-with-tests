@@ -1,0 +1,9 @@
+// Vitest Snapshot v1
+
+exports[`TodoList component > mounts without error 1`] = `
+"<ul data-v-4afa86a5=\\"\\" class=\\"todo\\" data-testid=\\"item-list\\">
+  <li data-v-4afa86a5=\\"\\" data-testid=\\"item-0\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-0\\">×</span> item 1</li>
+  <li data-v-4afa86a5=\\"\\" data-testid=\\"item-1\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-1\\">×</span> item 2</li>
+  <li data-v-4afa86a5=\\"\\" data-testid=\\"item-2\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-2\\">×</span> item 3</li>
+</ul>"
+`;

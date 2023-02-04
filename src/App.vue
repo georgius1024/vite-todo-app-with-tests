@@ -21,6 +21,7 @@ const removeItem = (item) => items.value = items.value.filter(e => e !== item)
     <TodoList :items="items" @remove="removeItem" />
     <hr />
     <TodoForm @add="addItem" />
+    <div>Click to add</div>
   </div>
 </template>
 

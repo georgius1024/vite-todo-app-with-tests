@@ -6,7 +6,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "vue": "^3.2.45",
@@ -16,7 +18,11 @@
     "@playwright/test": "^1.28.1",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@vitest/coverage-c8": "^0.28.4",
+    "@vue/test-utils": "^2.2.10",
+    "jsdom": "^21.1.0",
     "sass": "^1.58.0",
-    "vite": "^4.0.0"
+    "vite": "^4.0.0",
+    "vitest": "^0.28.4"
   }
 }
