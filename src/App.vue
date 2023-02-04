@@ -1,27 +1,28 @@
 <script setup>
-import { ref } from "vue";
+import { ref, reactive, computed } from "vue";
 import TodoList from "./components/TodoList.vue";
 import TodoForm from "./components/TodoForm.vue";
-
-const items = ref([
+import Todos from './services/todos.js'
+const todos = reactive(new Todos());
+[
   "Setup tests",
   "Create unit tests for services",
   "Create components tests for components",
   "Create e2e tests for app",
   "(*) Add more tests",
-]);
+].forEach(item => todos.add({text: item}))
 
-const addItem = (item) => items.value.push(item)
-const removeItem = (item) => items.value = items.value.filter(e => e !== item)
+const addItem = (item) => todos.add({text: item})
+const removeItem = (item) => todos.destroy(item.id)
+
 </script>
 
 <template>
   <div class="app">
     <h1>TodoApp</h1>
-    <TodoList :items="items" @remove="removeItem" />
+    <TodoList :items="todos.list" @remove="removeItem" />
     <hr />
     <TodoForm @add="addItem" />
-    <div>Click to add</div>
   </div>
 </template>
 

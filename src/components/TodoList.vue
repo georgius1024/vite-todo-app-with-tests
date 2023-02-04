@@ -1,17 +1,17 @@
 <template>
   <ul class="todo" data-testid="item-list">
     <li
-      v-for="(item, index) in items"
-      :data-testid="`item-${index}`"
-      :key="index"
+      v-for="item in items"
+      :data-testid="`item-${item.id}`"
+      :key="item.id"
     >
       <span
         class="remove"
-        :data-testid="`item-remove-${index}`"
+        :data-testid="`item-remove-${item.id}`"
         @click="removeItem(item)"
         >&times;</span
       >
-      {{ item }}
+      {{ item.text }}
     </li>
   </ul>
 </template>
