@@ -4,14 +4,12 @@ exports[`App component > mounts without error 1`] = `
 "<div data-v-7a7a37b1=\\"\\" class=\\"app\\">
   <h1 data-v-7a7a37b1=\\"\\">TodoApp</h1>
   <ul data-v-4afa86a5=\\"\\" data-v-7a7a37b1=\\"\\" class=\\"todo\\" data-testid=\\"item-list\\">
-    <li data-v-4afa86a5=\\"\\" data-testid=\\"item-0\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-0\\">×</span> Setup tests</li>
-    <li data-v-4afa86a5=\\"\\" data-testid=\\"item-1\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-1\\">×</span> Create unit tests for services</li>
-    <li data-v-4afa86a5=\\"\\" data-testid=\\"item-2\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-2\\">×</span> Create components tests for components</li>
-    <li data-v-4afa86a5=\\"\\" data-testid=\\"item-3\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-3\\">×</span> Create e2e tests for app</li>
-    <li data-v-4afa86a5=\\"\\" data-testid=\\"item-4\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-4\\">×</span> (*) Add more tests</li>
+    <li data-v-4afa86a5=\\"\\" data-testid=\\"item-0\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-0\\">×</span> item 1</li>
+    <li data-v-4afa86a5=\\"\\" data-testid=\\"item-1\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-1\\">×</span> item 2</li>
+    <li data-v-4afa86a5=\\"\\" data-testid=\\"item-2\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-2\\">×</span> item 3</li>
+    <li data-v-4afa86a5=\\"\\" data-testid=\\"item-3\\"><span data-v-4afa86a5=\\"\\" class=\\"remove\\" data-testid=\\"item-remove-3\\">×</span> item 4</li>
   </ul>
   <hr data-v-7a7a37b1=\\"\\">
   <div data-v-2bcb7aa7=\\"\\" data-v-7a7a37b1=\\"\\" class=\\"form\\"><input data-v-2bcb7aa7=\\"\\" placeholder=\\"enter todo\\" data-testid=\\"item-input\\"><button data-v-2bcb7aa7=\\"\\" data-testid=\\"item-submit\\">Add</button></div>
-  <div data-v-7a7a37b1=\\"\\">Click to add</div>
 </div>"
 `;

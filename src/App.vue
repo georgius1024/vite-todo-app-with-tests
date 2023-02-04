@@ -3,15 +3,8 @@ import { ref, reactive, computed } from "vue";
 import TodoList from "./components/TodoList.vue";
 import TodoForm from "./components/TodoForm.vue";
 import Todos from './services/todos.js'
-const todos = reactive(new Todos());
-[
-  "Setup tests",
-  "Create unit tests for services",
-  "Create components tests for components",
-  "Create e2e tests for app",
-  "(*) Add more tests",
-].forEach(item => todos.add({text: item}))
-
+const todos = reactive(Todos);
+todos.load();
 const addItem = (item) => todos.add({text: item})
 const removeItem = (item) => todos.destroy(item.id)
 
