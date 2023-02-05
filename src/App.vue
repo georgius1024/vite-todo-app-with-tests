@@ -2,18 +2,27 @@
 import { reactive } from "vue";
 import TodoList from "./components/TodoList.vue";
 import TodoForm from "./components/TodoForm.vue";
-import Todos from './services/todos.js'
-const todos = reactive(Todos);
-todos.load();
-const addItem = (item) => todos.add({text: item})
-const removeItem = (item) => todos.destroy(item.id)
+const todos = reactive({ items: [] });
+fetch("https://jsonplaceholder.typicode.com/todos").then((response) => {
+  response
+    .json()
+    .then(
+      (items) =>
+        (todos.items = items
+          .map((e) => ({ id: e.id, text: e.title }))
+          .slice(-10))
+    );
+});
 
+const addItem = (item) => todos.items.push(item);
+const removeItem = (item) =>
+  (todos.items = todos.items.filter((e) => e !== item));
 </script>
 
 <template>
   <div class="app">
     <h1>TodoApp</h1>
-    <TodoList :items="todos.list" @remove="removeItem" />
+    <TodoList :items="todos.items" @remove="removeItem" />
     <hr />
     <TodoForm @add="addItem" />
   </div>
