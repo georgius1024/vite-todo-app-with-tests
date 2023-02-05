@@ -1,8 +1,21 @@
+
+<template>
+  <div class="app">
+    <h1>TodoApp</h1>
+    <TodoList :items="items" @remove="removeItem" />
+    <hr />
+    <TodoForm @add="addItem" />
+    <div @click="nav" data-testid="nav">Click to add</div>
+  </div>
+</template>
+
 <script setup>
 import { ref } from "vue";
+import { useRouter } from 'vue-router'
 import TodoList from "./components/TodoList.vue";
 import TodoForm from "./components/TodoForm.vue";
 
+const router = useRouter()
 const items = ref([
   "Setup tests",
   "Create unit tests for services",
@@ -13,17 +26,9 @@ const items = ref([
 
 const addItem = (item) => items.value.push(item)
 const removeItem = (item) => items.value = items.value.filter(e => e !== item)
-</script>
+const nav = () => router.push('/')
 
-<template>
-  <div class="app">
-    <h1>TodoApp</h1>
-    <TodoList :items="items" @remove="removeItem" />
-    <hr />
-    <TodoForm @add="addItem" />
-    <div>Click to add</div>
-  </div>
-</template>
+</script>
 
 <style lang="scss" scoped>
 .app {
