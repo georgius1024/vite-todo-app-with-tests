@@ -14,7 +14,7 @@ fetch("https://jsonplaceholder.typicode.com/todos").then((response) => {
     );
 });
 
-const addItem = (item) => todos.items.push(item);
+const addItem = (item) => todos.items.push({id: new Date().valueOf(), text: item});
 const removeItem = (item) =>
   (todos.items = todos.items.filter((e) => e !== item));
 </script>
