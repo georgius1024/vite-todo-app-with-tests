@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { mount } from "@vue/test-utils";
+import { mount, shallowMount  } from "@vue/test-utils";
 import component from "src/App.vue";
 
 describe("App component", () => {
@@ -7,6 +7,18 @@ describe("App component", () => {
     const wrapper = mount(component);
     expect(wrapper).toBeDefined();
     expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it("contains list component", () => {
+    const wrapper = shallowMount(component);
+    const list = wrapper.findComponent('[data-testid="todos-list"]')
+    expect(list.exists()).toBe(true);
+  });
+
+  it("contains form component", () => {
+    const wrapper = shallowMount(component);
+    const form = wrapper.findComponent('[data-testid="todos-form"]')
+    expect(form.exists()).toBe(true);
   });
 
   it("renders items list", () => {

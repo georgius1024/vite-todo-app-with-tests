@@ -18,9 +18,9 @@ const removeItem = (item) => items.value = items.value.filter(e => e !== item)
 <template>
   <div class="app">
     <h1>TodoApp</h1>
-    <TodoList :items="items" @remove="removeItem" />
+    <TodoList data-testid="todos-list" :items="items" @remove="removeItem" />
     <hr />
-    <TodoForm @add="addItem" />
+    <TodoForm data-testid="todos-form" @add="addItem" />
     <div>Click to add</div>
   </div>
 </template>
