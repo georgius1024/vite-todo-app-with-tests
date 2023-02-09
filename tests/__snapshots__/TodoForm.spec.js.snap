@@ -1,3 +1,0 @@
-// Vitest Snapshot v1
-
-exports[`TodoForm component > mounts without error 1`] = `"<div data-v-2bcb7aa7=\\"\\" class=\\"form\\"><input data-v-2bcb7aa7=\\"\\" placeholder=\\"enter todo\\" data-testid=\\"item-input\\"><button data-v-2bcb7aa7=\\"\\" data-testid=\\"item-submit\\">Add</button></div>"`;
