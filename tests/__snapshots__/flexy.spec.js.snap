@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`Flexy component > mounts without error when false 1`] = `"<div> Condition is NOT true </div>"`;
+
+exports[`Flexy component > mounts without error when true 1`] = `"<div> Condition is true </div>"`;
