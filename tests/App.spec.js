@@ -1,8 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 import { mount } from "@vue/test-utils";
-import Todos from "src/services/todos.js";
-import component from "src/App.vue";
 import todos from "../src/services/todos.js";
+import component from "src/App.vue";
 
 describe("App component", () => {
   beforeEach(() => {
