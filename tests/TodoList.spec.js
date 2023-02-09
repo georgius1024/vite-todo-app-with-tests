@@ -3,11 +3,14 @@ import { mount } from "@vue/test-utils";
 import component from "src/components/TodoList.vue";
 
 describe("TodoList component", () => {
-  it("mounts without error", () => {
-    const items = ["item 1", "item 2", "item 3"];
-    const wrapper = mount(component, {
+  const items = ["item 1", "item 2", "item 3"];
+  let wrapper
+  beforeEach(() => {
+    wrapper = mount(component, {
       props: { items },
     });
+  })
+  it("mounts without error", () => {
     expect(wrapper.exists()).toBeTruthy();
     expect(wrapper.html()).toMatchSnapshot();
   });
